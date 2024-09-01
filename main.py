@@ -60,22 +60,7 @@ score.penup()
 score.goto(0, 250)
 score.color("white")
 score.hideturtle()
-score.write(f"Player points:{player_score}", False, align="left", font=("Courier", 22, "normal"))
-
-
-#Show Bet
-def update_bet():
-    bet = ""
-    bet.clear()
-    # bet.write(f"Player bet is:{player_bet}", False, align="right", font=("Courier", 22, "normal"))
-
-
-bet = turtle.Turtle()
-bet.penup()
-bet.goto(0, 250)
-bet.color("white")
-bet.hideturtle()
-bet.write(f"Player bet is:{player_bet}", False, align="right", font=("Courier", 22, "normal"))
+score.write(f"Player bet is: {player_bet} Player points:{player_score}", False, align="center", font=("Courier", 22, "normal"))
 
 
 
