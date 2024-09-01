@@ -31,6 +31,7 @@ def show_number():
 
     wn = turtle.Turtle()
     wn.penup()
+    wn.hideturtle()
     wn.color("white")
     screen.addshape("pearl3.gif")
     wn.shape("pearl3.gif")
@@ -48,27 +49,45 @@ def show_number():
         player_score += 1
         update_score()
 
+
+#Show Score
 def update_score():
     score.clear()
-    score.write(f"Player points: {player_score}", False, align="center", font=("Courier", 22, "normal"))
-
-
+    # score.write(f"Player points:{player_score}", False, align="left", font=("Courier", 22, "normal"))
 
 score = turtle.Turtle()
 score.penup()
 score.goto(0, 250)
 score.color("white")
 score.hideturtle()
-score.write(f"Player points: {player_score}", False, align="center", font=("Courier", 22, "normal"))
+score.write(f"Player points:{player_score}", False, align="left", font=("Courier", 22, "normal"))
+
+
+#Show Bet
+def update_bet():
+    bet = ""
+    bet.clear()
+    # bet.write(f"Player bet is:{player_bet}", False, align="right", font=("Courier", 22, "normal"))
+
+
+bet = turtle.Turtle()
+bet.penup()
+bet.goto(0, 250)
+bet.color("white")
+bet.hideturtle()
+bet.write(f"Player bet is:{player_bet}", False, align="right", font=("Courier", 22, "normal"))
 
 
 
 
-while game_on:
-    result = show_number()
-    if result is False:
-        game_on = False
-        print("Game over!")
-        break
+show_number()
+
+# #
+# while game_on:
+#     result = show_number()
+#     if result is False:
+#         game_on = False
+#         print("Game over!")
+#         break
 
 screen.exitonclick()
