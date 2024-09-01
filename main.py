@@ -14,6 +14,7 @@ t.shape("roulettetafel.gif")
 player_bet = screen.textinput(title="Place your bet", prompt="Your bet: ").title()
 
 
+
 #Data coordinates
 data = pandas.read_csv("roulettecoordinates.csv")
 all_numbers = data["number"].to_list()
